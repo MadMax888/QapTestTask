@@ -1,0 +1,291 @@
+
+@font-face {
+	font-family: "SegoeUIRegular";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "SegoeUIBold";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "SegoeUIItalic";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+}
+@font-face {
+	font-family: "SegoeUILight";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/SegoeUILight/SegoeUILight.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUILight/SegoeUILight.woff") format("woff"), url("../fonts/SegoeUILight/SegoeUILight.ttf") format("truetype");
+}
+@font-face {
+	font-family: "SegoeUISemiBold";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"), url("../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf") format("truetype");
+}
+
+*::before, *::after, * {
+	box-sizing: border-box;
+}
+body {
+	font: 100%/1.42 "SegoeUILight","SegoeUIRegular","SegoeUIBold","SegoeUIItalic",sans-serif;
+	padding: 0;
+	margin: 0;
+}
+.clearfix::before, .clearfix::after {
+	content: "";
+	display: table;
+}
+.clearfix::after,
+.clearfix::before {
+	clear: both;
+}
+
+.wrapper {
+	height: auto;
+	overflow: hidden;
+	padding: 30px 0 0 120px;
+	position: relative;
+	width: 100%;
+}
+.wrapper_top_line::before {
+	background: rgba(0, 0, 0, 0) url("../img/dec-top.png") repeat-x scroll 0 0;
+	content: "";
+	display: block;
+	height: 5px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+.wrapper_bottom_line::after {
+	background: rgba(0, 0, 0, 0) url("../img/dec-bottom.png") repeat-x scroll 0 0;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 3px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+.wrapper__header {
+}
+
+/*-----------------<header class="b-header">------------------------------------------------------------*/
+.b-header {
+	position: relative;
+}
+.b-header__title {
+}
+.b-title {
+	font-family: "SegoeUILight";
+	font-size: 3.2em;
+	margin: 0;
+}
+.b-header__basket {
+	position: absolute;
+	right: 2%;
+	top: 15%;
+	width: 23%;
+}
+.b-basket {
+	background: #d9644a none repeat scroll 0 0;
+	color: #ffffff;
+	font-size: 1.8em;
+	font-weight: 600;
+	padding: 9px 20px;
+	position: relative;
+	text-align: right;
+}
+.b-basket_icon::after {
+	background: rgba(0, 0, 0, 0) url("../img/basket.png") no-repeat scroll 0 0;
+	content: "";
+	display: block;
+	height: 31px;
+	left: 7%;
+	position: absolute;
+	top: 22%;
+	width: 34px;
+}
+.b-basket__total-price {
+	display: block;
+}
+.b-header__forward-link {
+	display: block;
+	left: -6.5%;
+	position: absolute;
+	top: 29%;
+}
+.forward-btn {
+	display: block;
+	width: 42px;
+	height: 42px;
+	background: url(../img/forward-arrow.png);
+}
+/*-----------------</header>----------------------------------------------------------------*/
+
+/*-----------------<section class="b-products">---------------------------------------------*/
+.wrapper__products {
+	margin: 35px 0;
+}
+.b-products {
+	background: #FCB9B9;
+	-webkit-align-content: stretch;
+	    -ms-flex-line-pack: stretch;
+	        align-content: stretch;
+	-webkit-align-items: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	    -ms-flex-flow: column wrap;
+	        flex-flow: column wrap;
+	height: 590px;
+	overflow-y: hidden;
+	position: relative;
+}
+.b-products__product-wrapper {
+	margin: 0 10px 10px 0;
+}
+.b-product {
+	background: #BF613F;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	line-height: 0;
+	height: 100%;
+}
+.b-product__img {
+	height: 100%;
+	max-width: 100%;
+	width: 100%;
+	transition: all .5s linear;
+}
+.b-product:hover .b-product__img {
+	-webkit-transform: scale(1.5);
+	        transform: scale(1.5);
+}
+.b-product__text {
+	background: rgba(255, 255, 255, .8);
+	bottom: 0;
+	color: #565150;
+	font-size: 1.25em;
+	padding: 8px 20px;
+	position: absolute;
+	width: 100%;
+	line-height: 1.42;
+	transition: all .4s;
+}
+.b-product:hover .b-product__text {
+	bottom: -100%;
+}
+/*-----------------</section>----------------------------------------------------*/
+
+
+.wrapper__goods {
+	margin: 30px 0 23px;
+	overflow-x: scroll;
+}
+.b-goods {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 500px;
+}
+.b-goods__good-wrapper {
+	margin: 0 10px 10px 0;
+}
+.b-good {
+}
+.b-good:hover .b-good__wrap-info {
+	border-color: #bf613f;
+}
+.b-good__wrap-info {
+	background: #bf613f none repeat scroll 0 0;
+	border: 2px solid #ffffff;
+	line-height: 0;
+	position: relative;
+}
+.b-good__img {
+}
+.b-good__info {
+	background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+	bottom: 0;
+	color: #565150;
+	font-family: "SegoeUIRegular";
+	font-size: 1.25em;
+	line-height: 1.42;
+	padding: 8px 20px;
+	position: absolute;
+	width: 100%;
+}
+.b-good__name {
+	display: inline-block;
+	text-align: left;
+	width: 50%;
+}
+.b-good__price {
+	color: #bf5d47;
+	display: inline-block;
+	text-align: right;
+	width: 50%;
+}
+.b-good__counter {
+}
+.b-counter {
+	background: #4ea686 none repeat scroll 0 0;
+	position: relative;
+}
+.b-counter__btn {
+	height: 40px;
+	position: absolute;
+	top: 29%;
+	width: 40px;
+}
+.b-counter__btn:first-of-type {
+    left: 6%;
+}
+.b-counter__btn:last-of-type {
+    right: 6%;
+}
+.b-button {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	display: block;
+	font-family: arial;
+	font-size: 1.5em;
+	outline: 0 none;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+}
+.b-button:active {
+    background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+}
+.b-counter__amount {
+	color: #ffffff;
+	line-height: 1;
+	margin: 10px 0;
+	padding: 18px;
+	text-align: center;
+}
+.b-counter__amount-title {
+	font-size: 1em;
+}
+.b-counter__amount-count {
+	font-family: "SegoeUIregular";
+	font-size: 2em;
+}
+.b-good__img-box {
+}

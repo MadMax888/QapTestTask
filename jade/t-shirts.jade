@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Maxim Ivashchuk
+	link(rel="stylesheet", href="/css/normalize.css")
+	link(rel="stylesheet", href="/css/style.css")
+body
+	.wrapper.wrapper_top_line.wrapper_bottom_line
+		.wrapper__header
+			header.b-header
+				.b-header__title
+					h1.b-title T-shirts
+				.b-header__basket
+					.b-basket.b-basket_icon#basket1
+						span.b-basket__total-price $0
+				a.b-header__forward-link(href="index.html")
+					span.forward-btn
+		.wrapper__goods
+			section.b-goods#goods1
+				.b-goods__good-wrapper
+					.b-good.b-good_id_11
+						.b-good__wrap-info
+							img.b-good__img(src="/img/t-shirts/t-shirt_1.png", alt="")
+							.b-good__info
+								span.b-good__name Green-Xtreame
+								span.b-good__price $250
+						.b-good__counter
+							.b-counter
+								.b-counter__btn
+									button.b-button.b-button_minus -
+								.b-counter__amount
+									.b-counter__amount-title amount
+									.b-counter__amount-count 0
+								.b-counter__btn
+									button.b-button.b-button_plus +
+				.b-goods__good-wrapper
+					.b-good.b-good_id_12
+						.b-good__wrap-info
+							img.b-good__img(src="/img/t-shirts/t-shirt_2.png", alt="")
+							.b-good__info
+								span.b-good__name Digital Owl
+								span.b-good__price $172
+						.b-good__counter
+							.b-counter
+								.b-counter__btn
+									button.b-button.b-button_minus -
+								.b-counter__amount
+									.b-counter__amount-title amount
+									.b-counter__amount-count 0
+								.b-counter__btn
+									button.b-button.b-button_plus +
+				.b-goods__good-wrapper
+					.b-good.b-good_id_13
+						.b-good__wrap-info
+							img.b-good__img(src="/img/t-shirts/t-shirt_3.png", alt="")
+							.b-good__info
+								span.b-good__name I Can
+								span.b-good__price $80
+						.b-good__counter
+							.b-counter
+								.b-counter__btn
+									button.b-button.b-button_minus -
+								.b-counter__amount
+									.b-counter__amount-title amount
+									.b-counter__amount-count 0
+								.b-counter__btn
+									button.b-button.b-button_plus +
+				.b-goods__good-wrapper
+					.b-good.b-good_id_14
+						.b-good__wrap-info
+							img.b-good__img(src="/img/t-shirts/t-shirt_1.png", alt="")
+							.b-good__info
+								span.b-good__name GB
+								span.b-good__price $25
+						.b-good__counter
+							.b-counter
+								.b-counter__btn
+									button.b-button.b-button_minus -
+								.b-counter__amount
+									.b-counter__amount-title amount
+									.b-counter__amount-count 0
+								.b-counter__btn
+									button.b-button.b-button_plus +
+				.b-goods__good-wrapper
+					.b-good.b-good_id_15
+						.b-good__wrap-info
+							img.b-good__img(src="/img/t-shirts/t-shirt_2.png", alt="")
+							.b-good__info
+								span.b-good__name Green
+								span.b-good__price $340
+						.b-good__counter
+							.b-counter
+								.b-counter__btn
+									button.b-button.b-button_minus -
+								.b-counter__amount
+									.b-counter__amount-title amount
+									.b-counter__amount-count 0
+								.b-counter__btn
+									button.b-button.b-button_plus +		
+	script(src="/scripts/jquery-2.1.4.min.js")
+	script(src="/scripts/script.js")
+	script var c1 = new cart("#goods1","#basket1");
